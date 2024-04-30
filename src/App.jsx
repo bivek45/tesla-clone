@@ -2,6 +2,7 @@ import React from 'react'
 import './App.css'
 import Navbar from './components/Navbar'
 import Home from './components/Home'
+import Panels from './components/Panels'
 
 
 function App() {
@@ -37,11 +38,31 @@ function App() {
           />
         </div>
         <div>
-        <Home
+          <Home
             title="Model S"
             price1="$66,490*"
             price2="72,990"
             backgroundImg="Homepage-Model-S-Desktop-LHD-6.22.avif"
+          />
+        </div>
+        <div>
+          <Panels
+            title="Solar Panels"
+            desc="Schedule a Virtual Consultation"
+            backgroundImg="Homepage-SolarPanels-01-Desktop.avif"
+          />
+        </div>
+        <div>
+          <Panels
+            title="Solar Roof"
+            desc="Produce Clean Energy From Your Roof"
+            backgroundImg="Homepage-SolarRoof-Desktop-Global.avif"
+          />
+        </div>
+        <div>
+          <Panels
+            title="PowerWall"
+            backgroundImg="Homepage-Powerwall-01-Desktop.avif"
           />
         </div>
       </div>
