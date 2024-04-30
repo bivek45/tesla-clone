@@ -18,9 +18,9 @@ const Navbar = () => {
         </div>
         <div className='hidden lg:inline'>
             <ul className='flex justify-between'>
-                <li className='py-1 px-3 hover:rounded hover:bg-black/5' >Support</li>
-                <li className='py-1 px-3 hover:rounded hover:bg-black/5' >Language</li>
-                <li className='py-1 px-3 hover:rounded hover:bg-black/5' >Account</li>
+                <li className='py-1 px-3 hover:rounded hover:bg-black/5' > <img className='h-7 text-black' src="Support.svg" alt="Customer Support" /></li>
+                <li className='py-1 px-3 hover:rounded hover:bg-black/5' > <img className='h-7 text-black' src="Language.svg" alt="Language" /></li>
+                <li className='py-1 px-3 hover:rounded hover:bg-black/5' > <img className='h-7 text-black' src="Account.svg" alt="Account" /></li>
             </ul>
         </div>
         <div className='lg:hidden'>
