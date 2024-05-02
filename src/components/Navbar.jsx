@@ -1,7 +1,15 @@
 import React, { useState } from 'react';
+import Popup from './Popup';
 
 const Navbar = () => {
-    const [isActive, setIsActive] = useState(false)
+    const [isActive, setIsActive] = useState(false);
+
+    const [isOpen, setIsOpen] = useState(false);
+
+    const togglePopup = () => {
+        setIsOpen(!isOpen);
+    };
+
     return (
         <>
             <div className='flex justify-between items-center px-5 text-sm font-bold'>
@@ -10,7 +18,14 @@ const Navbar = () => {
                 </div>
                 <div className='hidden lg:inline'>
                     <ul className='flex justify-center hover:cursor-pointer'>
-                        <li className='py-1 px-3 hover:rounded hover:bg-black/15'>Vehicles</li>
+                        <li className='py-1 px-3 hover:rounded hover:bg-black/15'>
+                            <button onClick={togglePopup}>Vehicles</button>
+                            <Popup isOpen={isOpen} close={togglePopup}
+                            title1="Model S"
+                            title2="Cyber Truck"
+                            title3="Model X"
+                            />
+                        </li>
                         <li className='py-1 px-3 hover:rounded hover:bg-black/15'>Energy</li>
                         <li className='py-1 px-3 hover:rounded hover:bg-black/15'>Charging</li>
                         <li className='py-1 px-3 hover:rounded hover:bg-black/15'>Discover</li>
@@ -33,18 +48,18 @@ const Navbar = () => {
                         </svg>
                     </button>
                     {isActive && (
-                    <div className='absolute right-0 z-10 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none'>
-                        <ul>
-                            <li className='my-9 py-1 px-3 hover:rounded hover:bg-black/15'>Vehicles</li>
-                            <li className='my-9 py-1 px-3 hover:rounded hover:bg-black/15'>Energy</li>
-                            <li className='my-9 py-1 px-3 hover:rounded hover:bg-black/15'>Charging</li>
-                            <li className='my-9 py-1 px-3 hover:rounded hover:bg-black/15'>Discover</li>
-                            <li className='my-9 py-1 px-3 hover:rounded hover:bg-black/15'>Shop</li>
-                            <li className='my-9 py-1 px-3 hover:rounded hover:bg-black/15'>Support</li>
-                            <li className='flex gap-4 my-9 py-1 px-3 hover:rounded hover:bg-black/15'><img className='h-7 text-black' src="Language.svg" alt="Language" />Language</li>
-                            <li className='flex gap-4 my-9 py-1 px-3 hover:rounded hover:bg-black/15'><img className='h-7 text-black' src="Account.svg" alt="Account" />Account</li>
-                        </ul>
-                    </div>
+                        <div className='absolute right-0 z-10 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none'>
+                            <ul>
+                                <li className='my-9 py-1 px-3 hover:rounded hover:bg-black/15'>Vehicles</li>
+                                <li className='my-9 py-1 px-3 hover:rounded hover:bg-black/15'>Energy</li>
+                                <li className='my-9 py-1 px-3 hover:rounded hover:bg-black/15'>Charging</li>
+                                <li className='my-9 py-1 px-3 hover:rounded hover:bg-black/15'>Discover</li>
+                                <li className='my-9 py-1 px-3 hover:rounded hover:bg-black/15'>Shop</li>
+                                <li className='my-9 py-1 px-3 hover:rounded hover:bg-black/15'>Support</li>
+                                <li className='flex gap-4 my-9 py-1 px-3 hover:rounded hover:bg-black/15'><img className='h-7 text-black' src="Language.svg" alt="Language" />Language</li>
+                                <li className='flex gap-4 my-9 py-1 px-3 hover:rounded hover:bg-black/15'><img className='h-7 text-black' src="Account.svg" alt="Account" />Account</li>
+                            </ul>
+                        </div>
                     )}
 
 
