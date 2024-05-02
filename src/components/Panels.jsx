@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const Panels = ({title, backgroundImg, desc, }) => {
     return (

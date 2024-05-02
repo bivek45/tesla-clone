@@ -1,8 +1,8 @@
-import React from 'react'
-import './App.css'
-import Navbar from './components/Navbar'
-import Home from './components/Home'
-import Panels from './components/Panels'
+import React from 'react';
+import './App.css';
+import Navbar from './components/Navbar';
+import Home from './components/Home';
+import Panels from './components/Panels';
 
 
 function App() {

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const Home = ({ title, price1, price2, backgroundImg }) => {
   return (
