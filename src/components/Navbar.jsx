@@ -4,11 +4,22 @@ import Popup from './Popup';
 const Navbar = () => {
     const [isActive, setIsActive] = useState(false);
 
-    const [isOpen, setIsOpen] = useState(false);
-
-    const togglePopup = () => {
-        setIsOpen(!isOpen);
+    const [vechiclePopupOpen, setvechiclePopupOpen] = useState(false);
+    const toggleVechiclePopup = () => {
+        setvechiclePopupOpen(!vechiclePopupOpen);
     };
+
+    const [energyPopupOpen, setEnergyPopupOpen] = useState(false);
+    const toggleEnergyPopup = () => {
+        setEnergyPopupOpen(!energyPopupOpen);
+    };
+
+    const [chargingPopupOpen, setChargingPopupOpen] = useState(false);
+    const toggleChargingPopup = () => {
+        setChargingPopupOpen(!chargingPopupOpen);
+    };
+
+
 
     return (
         <>
@@ -19,15 +30,38 @@ const Navbar = () => {
                 <div className='hidden lg:inline'>
                     <ul className='flex justify-center hover:cursor-pointer'>
                         <li className='py-1 px-3 hover:rounded hover:bg-black/15'>
-                            <button onClick={togglePopup}>Vehicles</button>
-                            <Popup isOpen={isOpen} close={togglePopup}
-                            title1="Model S"
-                            title2="Cyber Truck"
-                            title3="Model X"
+                            <button onClick={toggleVechiclePopup}>Vehicles</button>
+                            <Popup isOpen={vechiclePopupOpen} close={toggleVechiclePopup}
+                                image1="Mega-Menu-Vehicles-Model-S.avif"
+                                image2="Mega-Menu-Vehicles-Cybertruck-1x.avif"
+                                image3="Mega-Menu-Vehicles-Model-X.avif"
+                                title1="Model S"
+                                title2="Cyber Truck"
+                                title3="Model X"
                             />
                         </li>
-                        <li className='py-1 px-3 hover:rounded hover:bg-black/15'>Energy</li>
-                        <li className='py-1 px-3 hover:rounded hover:bg-black/15'>Charging</li>
+                        <li className='py-1 px-3 hover:rounded hover:bg-black/15'>
+                            <button onClick={toggleEnergyPopup}>Energy</button>
+                            <Popup isOpen={energyPopupOpen} close={toggleEnergyPopup}
+                                image1="Mega-Menu-Energy-Solar-Panels.avif"
+                                image2="Mega-Menu-Energy-Solar-Roof.avif"
+                                image3="Mega-Menu-Energy-Powerwall-US.avif"
+                                title1="Solar Panels"
+                                title2="Solar Roofs"
+                                title3="Powerwall"
+                            />
+                        </li>
+                        <li className='py-1 px-3 hover:rounded hover:bg-black/15'>
+                        <button onClick={toggleChargingPopup}>Charging</button>
+                            <Popup isOpen={chargingPopupOpen} close={toggleChargingPopup}
+                                image1="Mega-Menu-Charging-Charging.avif"
+                                image2="Mega-Menu-Charging-Home-Charging.avif"
+                                image3="Mega-Menu-Charging-Supercharging-NA.avif"
+                                title1="Charging"
+                                title2="Home Charging"
+                                title3="Supercharging"
+                            />
+                            </li>
                         <li className='py-1 px-3 hover:rounded hover:bg-black/15'>Discover</li>
                         <li className='py-1 px-3 hover:rounded hover:bg-black/15'>Shop</li>
                     </ul>

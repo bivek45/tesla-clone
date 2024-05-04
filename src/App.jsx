@@ -19,7 +19,6 @@ function MainLayout() {
         <Panels title="Solar Roof" desc="Produce Clean Energy From Your Roof" backgroundImg="Homepage-SolarRoof-Desktop-Global.avif" />
         <Panels title="PowerWall" backgroundImg="Homepage-Powerwall-01-Desktop.avif" />
       </div>
-      <Footer />
     </>
   );
 }
@@ -32,6 +31,7 @@ function App() {
         <Route path="/" element={<MainLayout />} />
         <Route path="/demo" element={<Demo />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }
