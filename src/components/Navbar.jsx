@@ -18,9 +18,6 @@ const Navbar = () => {
     const toggleChargingPopup = () => {
         setChargingPopupOpen(!chargingPopupOpen);
     };
-
-
-
     return (
         <>
             <div className='flex justify-between items-center px-5 text-sm font-bold'>
@@ -89,7 +86,7 @@ const Navbar = () => {
                                 <li className='my-9 py-1 px-3 hover:rounded hover:bg-black/15'>Charging</li>
                                 <li className='my-9 py-1 px-3 hover:rounded hover:bg-black/15'>Discover</li>
                                 <li className='my-9 py-1 px-3 hover:rounded hover:bg-black/15'>Shop</li>
-                                <li className='my-9 py-1 px-3 hover:rounded hover:bg-black/15'>Support</li>
+                                <li className='flex gap-4 my-9 py-1 px-3 hover:rounded hover:bg-black/15'><img className='h-7 text-black' src="Support.svg" alt="Language" />Support</li>
                                 <li className='flex gap-4 my-9 py-1 px-3 hover:rounded hover:bg-black/15'><img className='h-7 text-black' src="Language.svg" alt="Language" />Language</li>
                                 <li className='flex gap-4 my-9 py-1 px-3 hover:rounded hover:bg-black/15'><img className='h-7 text-black' src="Account.svg" alt="Account" />Account</li>
                             </ul>

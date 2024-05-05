@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const Footer = () => {
     let currentDate = new Date();
@@ -23,4 +23,4 @@ const Footer = () => {
     )
 }
 
-export default Footer
+export default Footer;

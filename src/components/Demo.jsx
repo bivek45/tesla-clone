@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 
 const Demo = () => {
 const [form, setForm] =useState({fname:" ", lname:" ", email:" ", phone:" "});
@@ -73,4 +73,4 @@ const saveDetails=()=>{
     )
 }
 
-export default Demo
+export default Demo;

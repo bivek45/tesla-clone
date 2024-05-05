@@ -6,7 +6,6 @@ const Home = ({ title, price1, price2, backgroundImg }) => {
   const goToDemo = () => {
     navigate('/demo');
   };
-
   return (
     <>
       <div className='relative w-full max-wi-lg'>
@@ -26,4 +25,4 @@ const Home = ({ title, price1, price2, backgroundImg }) => {
   )
 }
 
-export default Home
+export default Home;

@@ -19,4 +19,4 @@ const Panels = ({title, backgroundImg, desc, }) => {
     )
 }
 
-export default Panels
+export default Panels;
