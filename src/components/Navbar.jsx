@@ -18,6 +18,11 @@ const Navbar = () => {
     const toggleChargingPopup = () => {
         setChargingPopupOpen(!chargingPopupOpen);
     };
+
+    const [shopPopupOpen, setShopPopupOpen] = useState(false);
+    const toggleShopPopup = () => {
+        setShopPopupOpen(!shopPopupOpen);
+    };
     return (
         <>
             <div className='flex justify-between items-center px-5 text-sm font-bold'>
@@ -60,7 +65,17 @@ const Navbar = () => {
                             />
                             </li>
                         <li className='py-1 px-3 hover:rounded hover:bg-black/15'>Discover</li>
-                        <li className='py-1 px-3 hover:rounded hover:bg-black/15'>Shop</li>
+                        <li className='py-1 px-3 hover:rounded hover:bg-black/15'>
+                        <button onClick={toggleShopPopup}>Shop</button>
+                            <Popup isOpen={shopPopupOpen} close={toggleShopPopup}
+                                image1="Mega-Menu-Shop-Vehicle-Accessories.avif"
+                                image2="Mega-Menu-Shop-Apparel.avif"
+                                image3="Mega-Menu-Shop-Lifestyle.avif"
+                                title1="Vechicle Accessories"
+                                title2="Apparel"
+                                title3="Lifestyle"
+                            />
+                        </li>
                     </ul>
                 </div>
                 <div className='hidden lg:inline'>

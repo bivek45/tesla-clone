@@ -19,6 +19,7 @@ const saveDetails=()=>{
     setDetailsArray([...detailsArray, form]);
     localStorage.setItem("details", JSON.stringify([...detailsArray, form]));
     console.log([...detailsArray, form]);
+    alert("Details is added")
 }
 
     return (
@@ -39,25 +40,25 @@ const saveDetails=()=>{
                                     <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" >
                                         First Name
                                     </label>
-                                    <input value={form.fname} onChange={handleChange} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-grey-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" name="fname" id="fname" type="text" placeholder="Jane" />
+                                    <input value={form.fname} onChange={handleChange} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-grey-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" name="fname" id="fname" type="text" placeholder="" required />
                                 </div>
                                 <div className="w-full md:w-1/2 px-3">
                                     <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" >
                                         Last Name
                                     </label>
-                                    <input value={form.lname} onChange={handleChange} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" name="lname" id="lname" type="text" placeholder="Doe" />
+                                    <input value={form.lname} onChange={handleChange} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" name="lname" id="lname" type="text" placeholder="" required />
                                 </div>
                                 <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0 p-5">
                                     <label  className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" >
                                         Email Adress
                                     </label>
-                                    <input value={form.email} onChange={handleChange} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-grey-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" name="email" id="email" type="text" placeholder="bibek11@gmail.com" />
+                                    <input value={form.email} onChange={handleChange} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-grey-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" name="email" id="email" type="text" placeholder="" required />
                                 </div>
                                 <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0 p-5">
                                     <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" >
                                         Phone Number
                                     </label>
-                                    <input value={form.number} onChange={handleChange} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-grey-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" name="phone" id="phone" type="tel" placeholder="9819300900" />
+                                    <input value={form.number} onChange={handleChange} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-grey-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" name="phone" id="phone" type="tel" placeholder="" required/>
                                 </div>
                             </div>
                         </form>
