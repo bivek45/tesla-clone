@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Popup from './Popup';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const [isActive, setIsActive] = useState(false);
@@ -27,7 +28,9 @@ const Navbar = () => {
         <>
             <div className='flex justify-between items-center px-5 text-sm font-bold'>
                 <div>
-                    <img className="h-20 px-4 " src="Tesla logo.svg" alt="Tesla Logo" />
+                    <Link to="/">
+                        <img className="h-20 px-4 " src="Tesla logo.svg" alt="Tesla Logo" />
+                    </Link>
                 </div>
                 <div className='hidden lg:inline'>
                     <ul className='flex justify-center hover:cursor-pointer'>
@@ -54,7 +57,7 @@ const Navbar = () => {
                             />
                         </li>
                         <li className='py-1 px-3 hover:rounded hover:bg-black/15'>
-                        <button onClick={toggleChargingPopup}>Charging</button>
+                            <button onClick={toggleChargingPopup}>Charging</button>
                             <Popup isOpen={chargingPopupOpen} close={toggleChargingPopup}
                                 image1="Mega-Menu-Charging-Charging.avif"
                                 image2="Mega-Menu-Charging-Home-Charging.avif"
@@ -63,10 +66,10 @@ const Navbar = () => {
                                 title2="Home Charging"
                                 title3="Supercharging"
                             />
-                            </li>
+                        </li>
                         <li className='py-1 px-3 hover:rounded hover:bg-black/15'>Discover</li>
                         <li className='py-1 px-3 hover:rounded hover:bg-black/15'>
-                        <button onClick={toggleShopPopup}>Shop</button>
+                            <button onClick={toggleShopPopup}>Shop</button>
                             <Popup isOpen={shopPopupOpen} close={toggleShopPopup}
                                 image1="Mega-Menu-Shop-Vehicle-Accessories.avif"
                                 image2="Mega-Menu-Shop-Apparel.avif"
